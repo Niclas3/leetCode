@@ -2,11 +2,12 @@
 
 class Solution(object):
   def lengthOfLongestSubstring(self, s):
+    print s
     print self.getSubStringStartChart(s)
-   #  strs = s[2:]
-   # print self.getSubStringStartChart(strs)
-   # strss = strs[3:]
-   # print self.getSubStringStartChart(strss)
+
+  def findSubString(self, s):
+    index = self.getSubStringStartChart(s)
+    pass
 
   def getSubStringStartChart(self, s):
     dic = {}
@@ -18,13 +19,13 @@ class Solution(object):
 
     for index, c in enumerate(s):
       if not dic.has_key(c):
-        print "+", c, index
+        #print "+", c, index
         dic[c] = index
       else:
         firstWord = c
-        return (index, firstWord)
-    return (0, firstWord)
+        return index
+    return 0
 
-strs = "bbbbbbbb"
+strs = "abcabcabcd"
 so = Solution()
 so.lengthOfLongestSubstring(strs)
