@@ -2,8 +2,7 @@ class Solution(object):
   def convert(self, s, numRows):
     arr = []
     for index, c in enumerate(s):
-      print index, c
-
+      print index,
 
 so = Solution()
 s = "ABCDEFJHIJK"
